@@ -1,0 +1,22 @@
+{
+    "name": "Sparrow: GULP LT",
+    "version": "2.0.0",
+    "description": "Start Build 13-10-2022",
+    "main": "gulpfile.js",
+    "type": "module",
+    "scripts": {
+        "start": "gulp start",
+        "min": "gulp min",
+        "fonts": "gulp fonts",
+        "libs": "gulp libs"
+    },
+    "author": "Yevhenii Vorobei (Sparrow)",
+    "license": "ISC",
+    "devDependencies": {
+        "del": "^7.0.0",
+        "gulp": "^4.0.2",
+        "gulp-cli": "^2.3.0",
+        "gulp-newer": "^1.4.0",
+        "gulp-webp": "^4.0.1"
+    }
+}
