@@ -15,9 +15,15 @@ const webp_converter = () => {
     return gulp.src(`${path.src}/**/*.*` )
     .pipe(newer(path.webp))
     .pipe(webpConverter({ // Параметры: https://github.com/imagemin/imagemin-webp#imageminwebpoptions
-        quality: 100
+        quality: 90,
+        method: 4
     }))
     .pipe(gulp.dest(path.webp))
 }
 
-export const start = gulp.series(webp_converter);
+const clearSRC = async () => {
+    deleteAsync(`${path.src}/**/*.*`)
+    return null;
+} 
+
+export const start = gulp.series(webp_converter, clearSRC);
